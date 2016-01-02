@@ -3,6 +3,7 @@ void timer1() {
 	TMR1H = 0;
 	TMR1L = 0;
 	T1CON = 0x01;
+	TMR1ON = 1;
 	deley(30);
 	//deley = /2 ; // we fine a problem over here
 }
