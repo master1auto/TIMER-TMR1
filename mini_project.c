@@ -9,11 +9,15 @@ void timer1() {
 	TMR1ON_bit = 1;        // Start the timer 
 	}
 void main() {
+ 	double cpu_time_used,start, end;
+ 	start = clock();
 	int c, n, fact = 1;	// Declaration Variable 
 	TRISB = 0;		// Using port B as an out
 	timer1();		// Using timer1 function 
     for (c = 1; c <= n; c++){   // In order to calculate a vector
         fact = fact * c;
         TMR1ON_bit = 0;		// Stop the timer
+        end = clock();
+        cpu_time_used = clock*(end-start);
 	while(1){}
 	}
